@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    "client/node_modules": true,
+    "client/build": true,
+    "client/public": true,
+    "client/package-lock.json": true,
+    // "client/tsconfig.json": true,
+    "client/src/reportWebVitals.ts": true,
+    "client/src/setupTests.ts": true,
+    "client/src/react-app-env.d.ts": true,
+
+    "server/node_modules": true,
+    "server/package-lock.json": true,
+    // "server/tsconfig.json": true,
+
+    ".gitignore": true,
+    "README.md": true,
+  }
+}

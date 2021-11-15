@@ -1,0 +1,31 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "no-arg": true,
+    "new-parens": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "max-line-length": {
+      "options": {
+        "limit": 120,
+        "ignore-pattern": "^import [^,]+ from |^export | implements"
+      }
+    },
+    "no-empty-interface": false,
+    "quotemark": [true, "double", "jsx-double"],
+    "indent": [true, "spaces"],
+    "semicolon": [true, "always"],
+    "max-file-line-count": [true, 150],
+    "eofline": true
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [120]
+    }
+  }
+}

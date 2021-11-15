@@ -1,0 +1,237 @@
+@import "../node_modules/reset-css/reset.css";
+
+body {
+  // --bg: #f5f7fb;
+
+  // &[theme-mode="dark"] {
+  //   --bg: #21252a;
+  // }
+
+  //   background-color: var(--bg);
+
+  user-select: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+
+  [for="registrationNb"],
+  [for="password"],
+  [for="belongsTo"],
+  [for="belongsToNb"],
+  [for="firstname"],
+  [for="lastname"],
+  [for="ref"],
+  [for="cnamCode"],
+  [for="drName"],
+  [for="purshaseDate"],
+  [for="consultationDate"] {
+    margin-bottom: 0.5rem !important;
+  }
+
+  [placeholder="إخطر تاريخ الإستشارة"] {
+    padding-right: 0.5rem !important;
+  }
+
+  .info-modal {
+    .semi-collapse-content {
+      padding-top: 0;
+    }
+
+    .semi-modal-footer {
+      text-align: center;
+      margin: 1rem 0 1.5rem;
+    }
+  }
+
+  .btn-log-out.semi-button-with-icon:hover {
+    background: none;
+    cursor: pointer;
+  }
+
+  .entry-steps .semi-steps-nav {
+    margin: 0.5rem 0 0 !important;
+  }
+
+  .step-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .semi-table-body {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-left: 0;
+    padding-right: 0.75rem;
+
+    
+    &::-webkit-scrollbar {
+      display: none;
+      overflow-y: hidden; /* Hide vertical scrollbar */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+  }
+
+
+  &.ar {
+    direction: rtl;
+    
+    [for="registrationNb"],
+    [for="password"],
+    [for="belongsTo"],
+    [for="belongsToNb"],
+    [for="firstname"],
+    [for="lastname"],
+    [for="ref"],
+    [for="cnamCode"],
+    [for="drName"],
+    [for="purshaseDate"],
+    [for="consultationDate"] {
+      text-align: right;
+      padding: 0 !important;
+    }
+
+    .purchase-date-from-popover input {
+      padding-right: .75rem;
+    }
+
+    div:nth-child(1) > div > div > label:nth-child(1) > span.semi-radio-addon {
+      margin-right: -1rem !important;
+    }
+
+    .semi-icon.semi-icon-default.semi-icon-radio {
+      transform: translateX(0.9rem);
+    }
+
+    .semi-datepicker-month-grid {
+      direction: ltr;
+    }
+
+    .info-modal {
+      .semi-modal-title {
+        padding-right: 1rem;
+      }
+
+      .semi-collapse-item {
+        transform: translateX(2rem);
+      }
+
+      .semi-modal-header {
+        transform: translateX(1rem);
+      }
+
+      .semi-modal-body {
+        transform: translateX(-2.25rem);
+      }
+    }
+
+    .semi-button-with-icon {
+      .semi-button-content {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .semi-button-content-right {
+        margin-left: 0.25rem;
+      }
+    }
+    .entry-steps .semi-icon-chevron_right {
+      transform: rotate(180deg);
+    }
+
+    .table-cmpnt {
+      padding-left: 0.75rem;
+      padding-right: 0;
+    }
+  }
+}
+
+.root-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    height: 90px;
+    border-radius: 0.2rem;
+  }
+
+  .header-right-side {
+    .first-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      height: fit-content;
+
+      .lang-switcher {
+        display: flex;
+        gap: 0.25rem;
+
+        img {
+          height: 25px;
+          width: 40px;
+          border-radius: 5px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+
+      .theme-switcher {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+    }
+
+    .second-row {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .app-header {
+    img {
+      max-width: 149px;
+      margin: 0 auto;
+    }
+
+    flex-direction: column;
+    gap: 1rem;
+
+    .header-right-side {
+      flex-direction: column;
+
+      .first-row {
+        flex-direction: column;
+      }
+
+      .second-row {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .step-btns {
+    flex-direction: column;
+    // align-items: center;
+    
+    gap: 0 !important;
+  }
+}
